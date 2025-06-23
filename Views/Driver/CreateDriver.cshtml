@@ -1,0 +1,41 @@
+﻿@model ZaiEats.Models.Driver
+@{
+    ViewData["Title"] = "Add Driver";
+}
+
+<div class="max-w-md mx-auto mt-24 px-4 py-6 rounded-xl shadow-white shadow-sm bg-black">
+    <h2 class="text-xl font-bold text-center text-yellow-800 mb-4">Add Delivery Driver</h2>
+
+    <form asp-action="CreateDriver" method="post" class="space-y-4">
+        <div>
+            <label asp-for="FullName" class="text-gray-500"></label>
+            <input asp-for="FullName" class="w-full border mt-2 border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent " />
+        </div>
+        <div>
+            <label asp-for="Phone" class="text-gray-500"></label>
+            <input asp-for="Phone" class="w-full border mt-2 border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent " />
+        </div>
+        <div>
+            <label asp-for="Email" class="text-gray-500"></label>
+            <input asp-for="Email" class="w-full border mt-2 border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent " />
+        </div>
+        <div>
+            <label asp-for="VehicleType" class="text-gray-500"></label>
+            <input asp-for="VehicleType" class="w-full border mt-2 border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent " />
+        </div>
+        <div>
+            <label asp-for="LicensePlate" class="text-gray-500"></label>
+            <input asp-for="LicensePlate" class="w-full border mt-2 border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent "   />
+        </div>
+        <div class="flex items-center gap-3">
+            <input asp-for="IsActive" type="checkbox" id="IsActive" class="w-5 h-5 text-yellow-800 bg-gray-700 border-gray-600 rounded focus:ring-yellow-800" />
+            <label for="IsActive" class="text-sm text-gray-400 select-none">Driver is Active</label>
+        </div>
+
+            <label asp-for="CurrentLocation" class="text-gray-500"></label>
+            <input asp-for="CurrentLocation" placeholder="e.g. -25.7545,28.2314" class="w-full border mt-2 border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent "/>
+            <button type="submit" class="w-full py-2 mt-2 bg-yellow-800 text-white font-semibold rounded-md hover:bg-yellow-700 transition">
+            Save Driver
+        </button>
+    </form>
+</div>

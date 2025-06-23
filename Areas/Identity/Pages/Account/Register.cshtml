@@ -4,61 +4,68 @@
     ViewData["Title"] = "Register";
 }
 
-<h1>@ViewData["Title"]</h1>
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-100 via-white to-yellow-200 px-4 py-12">
+    <div class="w-full max-w-md bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl p-8 md:p-10">
 
-<div class="row">
-    <div class="col-md-4">
-        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h2>Create a new account.</h2>
-            <hr />
-            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                <label asp-for="Input.Email">Email</label>
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
+        <!-- Logo / Title -->
+        <div class="text-center mb-6">
+           
+            <h2 class="text-2xl font-bold text-yellow-800">Create a New Account</h2>
+            <p class="text-sm text-gray-500 mt-1">Join the ZaiEats family today</p>
+        </div>
+
+        <!-- Error Summary -->
+        <div asp-validation-summary="ModelOnly" class="text-red-600 text-sm mb-4" role="alert"></div>
+
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="space-y-6">
+
+
+            <div class="relative">
+              
+                <input asp-for="Input.FullName"  id="fullname"
+                class="peer w-full px-4 pt-5 pb-2 border border-gray-300 text-sm placeholder-transparent rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition"
+                autocomplete="username" placeholder="Name" />
+                <span asp-validation-for="Input.FullName" class="text-danger small"></span>
             </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.Password">Password</label>
-                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            <!-- Email -->
+            <div class="relative">
+              
+                <input asp-for="Input.Email" id="email"
+                       class="peer w-full px-4 pt-5 pb-2 border border-gray-300 text-sm placeholder-transparent rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition"
+                       autocomplete="username" placeholder="Email" />
+                <span asp-validation-for="Input.Email" class="text-red-600 text-xs mt-1 block"></span>
             </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.ConfirmPassword">Confirm Password</label>
-                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+
+            <!-- Password -->
+            <div class="relative">
+                
+                <input asp-for="Input.Password" id="password"
+                       class="peer w-full px-4 pt-5 pb-2 border border-gray-300 text-sm placeholder-transparent rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition"
+                       autocomplete="new-password" placeholder="Password" />
+                <span asp-validation-for="Input.Password" class="text-red-600 text-xs mt-1 block"></span>
             </div>
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+
+            <!-- Confirm Password -->
+            <div class="relative">
+               
+                <input asp-for="Input.ConfirmPassword" id="confirmPassword"
+                       class="peer w-full px-4 pt-5 pb-2 border border-gray-300 text-sm placeholder-transparent rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition"
+                       autocomplete="new-password" placeholder="Confirm Password" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-red-600 text-xs mt-1 block"></span>
+            </div>
+
+            <!-- Submit -->
+            <button id="registerSubmit" type="submit"
+                    class="w-full py-2 px-4 bg-yellow-800 hover:bg-yellow-700 text-white font-semibold rounded-lg shadow-md transition">
+                Register
+            </button>
         </form>
-    </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Use another service to register.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
-        </section>
+
+        <!-- Login Link -->
+        <div class="text-center text-sm mt-6">
+            <span class="text-gray-600">Already have an account?</span>
+            <a asp-page="/Account/Login" class="text-yellow-800 font-medium hover:underline ml-1">Log in</a>
+        </div>
     </div>
 </div>
 

@@ -1,6 +1,65 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model List<ZaiEats.Models.Restaurant>
+
+
+<!-- Full-width, no spacing -->
+<div class="relative bg-cover bg-center bg-no-repeat min-h-[100vh]"
+     style="background-image: url('/images/zai-back.jpg');">
+    <div class="bg-black/80 min-h-[100vh] flex flex-col justify-center items-center text-center text-white px-4">
+        @* <img src="~/images/Logo.png" alt="Zai Logo" *@
+        @*      class="w-24 h-24 md:w-28 md:h-28 mb-4 object-contain shadow-[0_8px_6px_-6px_rgba(255,255,255,0.3)]" /> *@
+
+
+        <h2 class="mt-2 text-2xl md:text-xl font-bold text-gray-200">Food you love delivered fast</h2>
+        <div class="mt-6 w-full max-w-xl">
+            <form class="flex items-center bg-white rounded-full shadow-md overflow-hidden" onsubmit="return false;">
+                <span class="pl-4 text-yellow-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                         stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M19.5 10.5c0 7.5-7.5 10.5-7.5 10.5S4.5 18 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                </span>
+
+                <input type="text"
+                       placeholder="Enter your delivery address"
+                       class="w-full px-4 py-2 text-sm text-gray-800 focus:outline-none"
+                       />
+            </form>
+        </div>
+
+       
+
+</div>
+</div>
+<h3 class="mt-16 text-xl md:text-2xl text-center font-semibold tracking-wide text-white"> Exclusive Deals </h3>
+<h3 class="mt-16 text-xl md:text-2xl text-center font-semibold tracking-wide text-white"> Browse Restaurants </h3>
+<div class="mt-8 px-4 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    @foreach (var restaurant in Model)
+    {
+        <div class="relative rounded-lg shadow-lg overflow-hidden group h-52">
+            <!-- Restaurant Image -->
+            <img src="@restaurant.ImageUrl" alt="@restaurant.Name" class="w-full h-full object-cover" />
+
+            <!-- Full Overlay -->
+            <div class="absolute inset-0 bg-black/60 flex flex-col justify-between px-4 py-3">
+                <div></div> <!-- Spacer -->
+                <div class="flex justify-between items-center">
+                    <h4 class="text-white tracking-wide font-semibold text-md">@restaurant.Name</h4>
+                    <a href="/Restaurant/ViewMenu/@restaurant.RestaurantId" class="bg-yellow-800 text-black text-sm font-semibold px-3 py-1.5 rounded hover:bg-yellow-700 transition">
+                        Order Now
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
 
 
 

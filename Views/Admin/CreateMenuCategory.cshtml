@@ -1,0 +1,59 @@
+﻿@model ZaiEats.Models.MenuCategory
+@{
+    ViewData["Title"] = "Add Menu Category";
+}
+
+<div class="max-w-md mx-auto mt-24 px-4 py-6 rounded-lg shadow-white shadow-sm bg-black text-white text-sm">
+    <h2 class="text-lg font-bold text-center text-yellow-800 mb-4">Add Menu Category</h2>
+
+    <form asp-action="CreateMenuCategory" method="post" class="space-y-4">
+        <div>
+            <label asp-for="RestaurantId" class="block text-gray-400">Select Restaurant</label>
+            <select asp-for="RestaurantId" asp-items="ViewBag.Restaurants" class="w-full border border-gray-600 bg-black text-white rounded px-3 py-1.5"></select>
+        </div>
+        <div>
+            <label asp-for="Name" class="block text-gray-400">Category Name</label>
+            <input asp-for="Name" class="w-full border border-gray-600 bg-transparent text-white rounded px-3 py-1.5" />
+        </div>
+        <div>
+            <label asp-for="Description" class="block text-gray-400">Description (optional)</label>
+            <textarea asp-for="Description" class="w-full border border-gray-600 bg-transparent text-white rounded px-3 py-1.5"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-yellow-800 text-white py-2 rounded hover:bg-yellow-700">Save Category</button>
+    </form>
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white text-black rounded-lg shadow-lg max-w-sm w-full p-6 space-y-4">
+            <h3 class="text-lg font-bold text-green-600">Success!</h3>
+            <p>Category "<span id="savedName" class="font-semibold"></span>" was saved successfully.</p>
+            <div class="flex justify-end space-x-3 pt-4">
+                <a href="@Url.Action("CreateMenuCategory", "Admin")"
+                   class="px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-500 text-sm">Add Another</a>
+                <a href="@Url.Action("CreateMenuItem", "Admin")"
+                   class="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 text-sm">Go to Menu Item</a>
+                <button onclick="closeModal()" class="px-3 py-2 text-sm">Close</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const shouldShowModal = '@TempData["ShowCategorySuccess"]' === 'True';
+            const savedName = '@TempData["SavedCategoryName"]';
+
+            if (shouldShowModal) {
+                const modal = document.getElementById("successModal");
+                const nameSpan = document.getElementById("savedName");
+                nameSpan.innerText = savedName;
+                modal.classList.remove("hidden");
+            }
+        });
+
+        function closeModal() {
+            document.getElementById("successModal").classList.add("hidden");
+        }
+    </script>
+}
+

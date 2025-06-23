@@ -178,6 +178,10 @@ namespace ZaiEats.Data.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -222,6 +226,192 @@ namespace ZaiEats.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.Driver", b =>
+                {
+                    b.Property<int>("DriverId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DriverId"));
+
+                    b.Property<string>("CurrentLocation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LicensePlate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VehicleType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("DriverId");
+
+                    b.ToTable("Drivers");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.MenuCategory", b =>
+                {
+                    b.Property<int>("MenuCategoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MenuCategoryId"));
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RestaurantId")
+                        .HasColumnType("int");
+
+                    b.HasKey("MenuCategoryId");
+
+                    b.HasIndex("RestaurantId");
+
+                    b.ToTable("MenuCategories");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.MenuItem", b =>
+                {
+                    b.Property<int>("MenuItemId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MenuItemId"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsAvailable")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MenuCategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("RestaurantId")
+                        .HasColumnType("int");
+
+                    b.HasKey("MenuItemId");
+
+                    b.HasIndex("MenuCategoryId");
+
+                    b.HasIndex("RestaurantId");
+
+                    b.ToTable("MenuItems");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.MenuOptionGroup", b =>
+                {
+                    b.Property<int>("MenuOptionGroupId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MenuOptionGroupId"));
+
+                    b.Property<int?>("DisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<string>("GroupName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsRequired")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MenuItemId")
+                        .HasColumnType("int");
+
+                    b.HasKey("MenuOptionGroupId");
+
+                    b.HasIndex("MenuItemId");
+
+                    b.ToTable("MenuOptionGroups");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.MenuOptionItem", b =>
+                {
+                    b.Property<int>("MenuOptionItemId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MenuOptionItemId"));
+
+                    b.Property<decimal?>("AdditionalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("DisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MenuOptionGroupId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("OptionName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("MenuOptionItemId");
+
+                    b.HasIndex("MenuOptionGroupId");
+
+                    b.ToTable("MenuOptionItems");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.Restaurant", b =>
+                {
+                    b.Property<int>("RestaurantId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RestaurantId"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("RestaurantId");
+
+                    b.ToTable("Restaurants");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -273,6 +463,73 @@ namespace ZaiEats.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.MenuCategory", b =>
+                {
+                    b.HasOne("ZaiEats.Models.Restaurant", "Restaurant")
+                        .WithMany()
+                        .HasForeignKey("RestaurantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Restaurant");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.MenuItem", b =>
+                {
+                    b.HasOne("ZaiEats.Models.MenuCategory", "MenuCategory")
+                        .WithMany("MenuItems")
+                        .HasForeignKey("MenuCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ZaiEats.Models.Restaurant", "Restaurant")
+                        .WithMany()
+                        .HasForeignKey("RestaurantId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("MenuCategory");
+
+                    b.Navigation("Restaurant");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.MenuOptionGroup", b =>
+                {
+                    b.HasOne("ZaiEats.Models.MenuItem", "MenuItem")
+                        .WithMany("OptionGroups")
+                        .HasForeignKey("MenuItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MenuItem");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.MenuOptionItem", b =>
+                {
+                    b.HasOne("ZaiEats.Models.MenuOptionGroup", "MenuOptionGroup")
+                        .WithMany("OptionItems")
+                        .HasForeignKey("MenuOptionGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MenuOptionGroup");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.MenuCategory", b =>
+                {
+                    b.Navigation("MenuItems");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.MenuItem", b =>
+                {
+                    b.Navigation("OptionGroups");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.MenuOptionGroup", b =>
+                {
+                    b.Navigation("OptionItems");
                 });
 #pragma warning restore 612, 618
         }

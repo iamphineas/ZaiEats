@@ -2,6 +2,9 @@
 using ZaiEats.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -62,6 +65,7 @@ async Task SeedRolesAndAdminAsync(RoleManager<IdentityRole> roleManager, UserMan
             UserName = adminEmail,
             Email = adminEmail,
             EmailConfirmed = true,
+            FullName = "Admin" 
         };
 
 
@@ -86,6 +90,15 @@ else
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+var supportedCultures = new[] { new CultureInfo("af-ZA") }; // or "fr-FR" if preferred
+var localizationOptions = new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture("af-ZA"),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+};
+
+app.UseRequestLocalization(localizationOptions);
 
 app.UseRouting();
 

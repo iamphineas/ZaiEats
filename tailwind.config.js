@@ -5,6 +5,7 @@
         './wwwroot/**/*.html',
         './*.cshtml'
     ],
+    safelist: ['bg-red-800'] ['bg-red-600'],
     theme: {
         extend: {},
     },
