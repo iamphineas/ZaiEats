@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "STBcHPvFc9UnKBjrxGEz2uVMSCg/av/Cza1h10x/M4I=",
+  "Hash": "CmsYSJq26C3G2heBjx6WXMykE4ALqtK/kN8xDDNEudk=",
   "Source": "ZaiEats",
   "BasePath": "_content/ZaiEats",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9a0no846f2",
-      "Integrity": "MVnVxpr+qaxDptgP0C5Wyrz7pQwZ/1asFCPez+JdSSg=",
+      "Fingerprint": "v82fld3fre",
+      "Integrity": "HzIlEPZ6jjh4yPXma7IRLMqPYC/nHW/HrYjO/rKGuJg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1382,6 +1382,27 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\09206b57-fe82-447a-b672-3d697bffa1a7.jpg",
+      "SourceId": "ZaiEats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\",
+      "BasePath": "_content/ZaiEats",
+      "RelativePath": "images/09206b57-fe82-447a-b672-3d697bffa1a7#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "riscnbqqn1",
+      "Integrity": "nUE/nSAeYIq13nB4l0/7PB6ZP+VZGLAb+AL/5eg22RQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\09206b57-fe82-447a-b672-3d697bffa1a7.jpg"
+    },
+    {
       "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\25670462-552e-4672-80b5-85159de3e388.jpg",
       "SourceId": "ZaiEats",
       "SourceType": "Discovered",
@@ -1422,6 +1443,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\3019c6af-e852-4052-996e-c3ba8f234995.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\39c88c15-10c2-432b-a9b5-901fbd0aa86b.jpg",
+      "SourceId": "ZaiEats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\",
+      "BasePath": "_content/ZaiEats",
+      "RelativePath": "images/39c88c15-10c2-432b-a9b5-901fbd0aa86b#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "riscnbqqn1",
+      "Integrity": "nUE/nSAeYIq13nB4l0/7PB6ZP+VZGLAb+AL/5eg22RQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\39c88c15-10c2-432b-a9b5-901fbd0aa86b.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\42965dfa-bb7a-49f6-9a0c-c6a76b24b584.jpg",
+      "SourceId": "ZaiEats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\",
+      "BasePath": "_content/ZaiEats",
+      "RelativePath": "images/42965dfa-bb7a-49f6-9a0c-c6a76b24b584#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e9691rdjq8",
+      "Integrity": "8gQsuJ/tRbZX7DEIUW0xe0ol5SHlQ1viYtrgftHo5Z4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\42965dfa-bb7a-49f6-9a0c-c6a76b24b584.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\5ea532eb-54c5-4bb5-9472-5a7df2e7d6b9.jpg",
+      "SourceId": "ZaiEats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\",
+      "BasePath": "_content/ZaiEats",
+      "RelativePath": "images/5ea532eb-54c5-4bb5-9472-5a7df2e7d6b9#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ckpuapb51n",
+      "Integrity": "FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\5ea532eb-54c5-4bb5-9472-5a7df2e7d6b9.jpg"
     },
     {
       "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\663ae78a-d6ea-4047-b358-08fa3a35fe57.jpg",
@@ -1487,6 +1571,48 @@
       "OriginalItemSpec": "wwwroot\\images\\83b50eea-d3cf-403f-be58-2dae9b379904.jpeg"
     },
     {
+      "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\8af9272e-a536-428d-823e-d98cdf9614e3.jpg",
+      "SourceId": "ZaiEats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\",
+      "BasePath": "_content/ZaiEats",
+      "RelativePath": "images/8af9272e-a536-428d-823e-d98cdf9614e3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ckpuapb51n",
+      "Integrity": "FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8af9272e-a536-428d-823e-d98cdf9614e3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\951086d4-8d3d-4848-bac4-83cf6990237b.jpg",
+      "SourceId": "ZaiEats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\",
+      "BasePath": "_content/ZaiEats",
+      "RelativePath": "images/951086d4-8d3d-4848-bac4-83cf6990237b#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ea3do9fap1",
+      "Integrity": "5p0NPlNniJlnhzh5gxOu0kG2gJjagFTIz4QeFW1XuB0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\951086d4-8d3d-4848-bac4-83cf6990237b.jpg"
+    },
+    {
       "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\99ff282d-6fff-4855-bae2-f6fa61801883.jpg",
       "SourceId": "ZaiEats",
       "SourceType": "Discovered",
@@ -1550,6 +1676,27 @@
       "OriginalItemSpec": "wwwroot\\images\\a014e307-6e77-4126-bb3a-048f2e463646.jpg"
     },
     {
+      "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\a1014159-a908-4931-9ba9-2eba11a5eb2d.jpg",
+      "SourceId": "ZaiEats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\",
+      "BasePath": "_content/ZaiEats",
+      "RelativePath": "images/a1014159-a908-4931-9ba9-2eba11a5eb2d#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ckpuapb51n",
+      "Integrity": "FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a1014159-a908-4931-9ba9-2eba11a5eb2d.jpg"
+    },
+    {
       "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\a923c5c7-29b9-4a9a-bd57-321462e4e658.jpg",
       "SourceId": "ZaiEats",
       "SourceType": "Discovered",
@@ -1590,6 +1737,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\be1290c2-808f-4aff-871e-ae3ab34e6060.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\d30a61d5-6a7c-47f6-81a5-8542ed6f25fe.png",
+      "SourceId": "ZaiEats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\",
+      "BasePath": "_content/ZaiEats",
+      "RelativePath": "images/d30a61d5-6a7c-47f6-81a5-8542ed6f25fe#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vdt43y5wpl",
+      "Integrity": "PZfFxw0OWF26+FcBuxwPiZ1mrFKnXC3iAJ4sDS3qFlA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\d30a61d5-6a7c-47f6-81a5-8542ed6f25fe.png"
+    },
+    {
+      "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\e1af6124-616a-4c0d-a191-3aeae7ed578b.jpg",
+      "SourceId": "ZaiEats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\",
+      "BasePath": "_content/ZaiEats",
+      "RelativePath": "images/e1af6124-616a-4c0d-a191-3aeae7ed578b#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e9691rdjq8",
+      "Integrity": "8gQsuJ/tRbZX7DEIUW0xe0ol5SHlQ1viYtrgftHo5Z4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\e1af6124-616a-4c0d-a191-3aeae7ed578b.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\e2a06107-e5c7-45ca-af88-3c17dd18fafe.jpg",
+      "SourceId": "ZaiEats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\",
+      "BasePath": "_content/ZaiEats",
+      "RelativePath": "images/e2a06107-e5c7-45ca-af88-3c17dd18fafe#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ok1yb287bt",
+      "Integrity": "iFANBQlqCs/11CRkK3t0Nzf1dvOg85gI7eM9KewVk7w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\e2a06107-e5c7-45ca-af88-3c17dd18fafe.jpg"
     },
     {
       "Identity": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\e84ea531-131d-46ca-a223-759527a26e8a.jpg",
@@ -2896,51 +3106,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.9a0no846f2.css",
-      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "25103"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"MVnVxpr+qaxDptgP0C5Wyrz7pQwZ/1asFCPez+JdSSg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Jun 2025 18:29:14 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9a0no846f2"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-MVnVxpr+qaxDptgP0C5Wyrz7pQwZ/1asFCPez+JdSSg="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -2951,7 +3116,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "25103"
+          "Value": "25709"
         },
         {
           "Name": "Content-Type",
@@ -2959,11 +3124,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"MVnVxpr+qaxDptgP0C5Wyrz7pQwZ/1asFCPez+JdSSg=\""
+          "Value": "\"HzIlEPZ6jjh4yPXma7IRLMqPYC/nHW/HrYjO/rKGuJg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 22 Jun 2025 18:29:14 GMT"
+          "Value": "Tue, 24 Jun 2025 19:06:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2973,7 +3138,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-MVnVxpr+qaxDptgP0C5Wyrz7pQwZ/1asFCPez+JdSSg="
+          "Value": "sha256-HzIlEPZ6jjh4yPXma7IRLMqPYC/nHW/HrYjO/rKGuJg="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.v82fld3fre.css",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25709"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HzIlEPZ6jjh4yPXma7IRLMqPYC/nHW/HrYjO/rKGuJg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 19:06:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v82fld3fre"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HzIlEPZ6jjh4yPXma7IRLMqPYC/nHW/HrYjO/rKGuJg="
         }
       ]
     },
@@ -5362,6 +5572,88 @@
       ]
     },
     {
+      "Route": "images/09206b57-fe82-447a-b672-3d697bffa1a7.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\09206b57-fe82-447a-b672-3d697bffa1a7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3477762"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nUE/nSAeYIq13nB4l0/7PB6ZP+VZGLAb+AL/5eg22RQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 16:58:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nUE/nSAeYIq13nB4l0/7PB6ZP+VZGLAb+AL/5eg22RQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/09206b57-fe82-447a-b672-3d697bffa1a7.riscnbqqn1.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\09206b57-fe82-447a-b672-3d697bffa1a7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3477762"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nUE/nSAeYIq13nB4l0/7PB6ZP+VZGLAb+AL/5eg22RQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 16:58:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "riscnbqqn1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/09206b57-fe82-447a-b672-3d697bffa1a7.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nUE/nSAeYIq13nB4l0/7PB6ZP+VZGLAb+AL/5eg22RQ="
+        }
+      ]
+    },
+    {
       "Route": "images/25670462-552e-4672-80b5-85159de3e388.jpg",
       "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\25670462-552e-4672-80b5-85159de3e388.jpg",
       "Selectors": [],
@@ -5522,6 +5814,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-8KrQe1xgWUB759eJUwT4qsBT5dU7UVfazpmEXZakeFI="
+        }
+      ]
+    },
+    {
+      "Route": "images/39c88c15-10c2-432b-a9b5-901fbd0aa86b.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\39c88c15-10c2-432b-a9b5-901fbd0aa86b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3477762"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nUE/nSAeYIq13nB4l0/7PB6ZP+VZGLAb+AL/5eg22RQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 18:13:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nUE/nSAeYIq13nB4l0/7PB6ZP+VZGLAb+AL/5eg22RQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/39c88c15-10c2-432b-a9b5-901fbd0aa86b.riscnbqqn1.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\39c88c15-10c2-432b-a9b5-901fbd0aa86b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3477762"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nUE/nSAeYIq13nB4l0/7PB6ZP+VZGLAb+AL/5eg22RQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 18:13:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "riscnbqqn1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/39c88c15-10c2-432b-a9b5-901fbd0aa86b.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nUE/nSAeYIq13nB4l0/7PB6ZP+VZGLAb+AL/5eg22RQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/42965dfa-bb7a-49f6-9a0c-c6a76b24b584.e9691rdjq8.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\42965dfa-bb7a-49f6-9a0c-c6a76b24b584.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1312523"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8gQsuJ/tRbZX7DEIUW0xe0ol5SHlQ1viYtrgftHo5Z4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 16:54:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e9691rdjq8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/42965dfa-bb7a-49f6-9a0c-c6a76b24b584.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8gQsuJ/tRbZX7DEIUW0xe0ol5SHlQ1viYtrgftHo5Z4="
+        }
+      ]
+    },
+    {
+      "Route": "images/42965dfa-bb7a-49f6-9a0c-c6a76b24b584.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\42965dfa-bb7a-49f6-9a0c-c6a76b24b584.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1312523"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8gQsuJ/tRbZX7DEIUW0xe0ol5SHlQ1viYtrgftHo5Z4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 16:54:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8gQsuJ/tRbZX7DEIUW0xe0ol5SHlQ1viYtrgftHo5Z4="
+        }
+      ]
+    },
+    {
+      "Route": "images/5ea532eb-54c5-4bb5-9472-5a7df2e7d6b9.ckpuapb51n.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\5ea532eb-54c5-4bb5-9472-5a7df2e7d6b9.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "543257"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 18:04:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ckpuapb51n"
+        },
+        {
+          "Name": "label",
+          "Value": "images/5ea532eb-54c5-4bb5-9472-5a7df2e7d6b9.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA="
+        }
+      ]
+    },
+    {
+      "Route": "images/5ea532eb-54c5-4bb5-9472-5a7df2e7d6b9.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\5ea532eb-54c5-4bb5-9472-5a7df2e7d6b9.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "543257"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 18:04:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA="
         }
       ]
     },
@@ -5772,6 +6310,170 @@
       ]
     },
     {
+      "Route": "images/8af9272e-a536-428d-823e-d98cdf9614e3.ckpuapb51n.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\8af9272e-a536-428d-823e-d98cdf9614e3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "543257"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Jun 2025 19:45:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ckpuapb51n"
+        },
+        {
+          "Name": "label",
+          "Value": "images/8af9272e-a536-428d-823e-d98cdf9614e3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA="
+        }
+      ]
+    },
+    {
+      "Route": "images/8af9272e-a536-428d-823e-d98cdf9614e3.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\8af9272e-a536-428d-823e-d98cdf9614e3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "543257"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Jun 2025 19:45:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA="
+        }
+      ]
+    },
+    {
+      "Route": "images/951086d4-8d3d-4848-bac4-83cf6990237b.ea3do9fap1.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\951086d4-8d3d-4848-bac4-83cf6990237b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "320719"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5p0NPlNniJlnhzh5gxOu0kG2gJjagFTIz4QeFW1XuB0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 17:02:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ea3do9fap1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/951086d4-8d3d-4848-bac4-83cf6990237b.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5p0NPlNniJlnhzh5gxOu0kG2gJjagFTIz4QeFW1XuB0="
+        }
+      ]
+    },
+    {
+      "Route": "images/951086d4-8d3d-4848-bac4-83cf6990237b.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\951086d4-8d3d-4848-bac4-83cf6990237b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "320719"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5p0NPlNniJlnhzh5gxOu0kG2gJjagFTIz4QeFW1XuB0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 17:02:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5p0NPlNniJlnhzh5gxOu0kG2gJjagFTIz4QeFW1XuB0="
+        }
+      ]
+    },
+    {
       "Route": "images/99ff282d-6fff-4855-bae2-f6fa61801883.jpg",
       "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\99ff282d-6fff-4855-bae2-f6fa61801883.jpg",
       "Selectors": [],
@@ -6018,6 +6720,88 @@
       ]
     },
     {
+      "Route": "images/a1014159-a908-4931-9ba9-2eba11a5eb2d.ckpuapb51n.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\a1014159-a908-4931-9ba9-2eba11a5eb2d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "543257"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Jun 2025 19:43:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ckpuapb51n"
+        },
+        {
+          "Name": "label",
+          "Value": "images/a1014159-a908-4931-9ba9-2eba11a5eb2d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA="
+        }
+      ]
+    },
+    {
+      "Route": "images/a1014159-a908-4931-9ba9-2eba11a5eb2d.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\a1014159-a908-4931-9ba9-2eba11a5eb2d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "543257"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Jun 2025 19:43:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FOUlOmexHajpCcS3zLX0Cvk5M5VXj4RrG8AL6ZCMOWA="
+        }
+      ]
+    },
+    {
       "Route": "images/a923c5c7-29b9-4a9a-bd57-321462e4e658.jpg",
       "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\a923c5c7-29b9-4a9a-bd57-321462e4e658.jpg",
       "Selectors": [],
@@ -6178,6 +6962,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-8gQsuJ/tRbZX7DEIUW0xe0ol5SHlQ1viYtrgftHo5Z4="
+        }
+      ]
+    },
+    {
+      "Route": "images/d30a61d5-6a7c-47f6-81a5-8542ed6f25fe.png",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\d30a61d5-6a7c-47f6-81a5-8542ed6f25fe.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1225671"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PZfFxw0OWF26+FcBuxwPiZ1mrFKnXC3iAJ4sDS3qFlA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Jun 2025 19:37:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PZfFxw0OWF26+FcBuxwPiZ1mrFKnXC3iAJ4sDS3qFlA="
+        }
+      ]
+    },
+    {
+      "Route": "images/d30a61d5-6a7c-47f6-81a5-8542ed6f25fe.vdt43y5wpl.png",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\d30a61d5-6a7c-47f6-81a5-8542ed6f25fe.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1225671"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PZfFxw0OWF26+FcBuxwPiZ1mrFKnXC3iAJ4sDS3qFlA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Jun 2025 19:37:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vdt43y5wpl"
+        },
+        {
+          "Name": "label",
+          "Value": "images/d30a61d5-6a7c-47f6-81a5-8542ed6f25fe.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PZfFxw0OWF26+FcBuxwPiZ1mrFKnXC3iAJ4sDS3qFlA="
+        }
+      ]
+    },
+    {
+      "Route": "images/e1af6124-616a-4c0d-a191-3aeae7ed578b.e9691rdjq8.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\e1af6124-616a-4c0d-a191-3aeae7ed578b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1312523"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8gQsuJ/tRbZX7DEIUW0xe0ol5SHlQ1viYtrgftHo5Z4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 18:01:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e9691rdjq8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/e1af6124-616a-4c0d-a191-3aeae7ed578b.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8gQsuJ/tRbZX7DEIUW0xe0ol5SHlQ1viYtrgftHo5Z4="
+        }
+      ]
+    },
+    {
+      "Route": "images/e1af6124-616a-4c0d-a191-3aeae7ed578b.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\e1af6124-616a-4c0d-a191-3aeae7ed578b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1312523"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8gQsuJ/tRbZX7DEIUW0xe0ol5SHlQ1viYtrgftHo5Z4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 18:01:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8gQsuJ/tRbZX7DEIUW0xe0ol5SHlQ1viYtrgftHo5Z4="
+        }
+      ]
+    },
+    {
+      "Route": "images/e2a06107-e5c7-45ca-af88-3c17dd18fafe.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\e2a06107-e5c7-45ca-af88-3c17dd18fafe.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "916668"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iFANBQlqCs/11CRkK3t0Nzf1dvOg85gI7eM9KewVk7w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 18:15:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iFANBQlqCs/11CRkK3t0Nzf1dvOg85gI7eM9KewVk7w="
+        }
+      ]
+    },
+    {
+      "Route": "images/e2a06107-e5c7-45ca-af88-3c17dd18fafe.ok1yb287bt.jpg",
+      "AssetFile": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\wwwroot\\images\\e2a06107-e5c7-45ca-af88-3c17dd18fafe.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "916668"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iFANBQlqCs/11CRkK3t0Nzf1dvOg85gI7eM9KewVk7w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 18:15:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ok1yb287bt"
+        },
+        {
+          "Name": "label",
+          "Value": "images/e2a06107-e5c7-45ca-af88-3c17dd18fafe.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iFANBQlqCs/11CRkK3t0Nzf1dvOg85gI7eM9KewVk7w="
         }
       ]
     },

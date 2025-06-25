@@ -9,7 +9,7 @@
          class="absolute inset-0 w-full h-full object-cover brightness-50" />
 
     <div class="absolute inset-0 flex items-center justify-center">
-        <h1 class="text-yellow-500 text-lg md:text-3xl font-bold drop-shadow-lg text-center">
+        <h1 class="text-yellow-500 text-3xl tracking-wide md:text-3xl font-bold drop-shadow-lg text-center">
             @Model.Name
         </h1>
     </div>
@@ -40,44 +40,41 @@
     {
         <div class="mb-8" id="cat-@category.Name.Replace(" ", "-")">
 
+
             @foreach (var item in category.MenuItems)
             {
-                <div class="shadow-white rounded-lg p-4 mb-4 shadow-sm">
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <h4 class="text-md font-bold">@item.Name</h4>
-                            <p class="text-sm text-gray-400">@item.Description</p>
-                            <p class="text-sm text-yellow-300 font-semibold">R @item.Price</p>
-                        </div>
-                        <img src="@item.ImageUrl" alt="item" class="w-20 h-20 object-cover rounded" />
-                    </div>
+                <div class="flex bg-black rounded-lg p-4 mb-4 shadow-md border border-gray-700">
+                    <!-- Left: Image -->
+                    <img src="@item.ImageUrl" alt="item"
+                         class="w-56 h-40 object-cover rounded-md mr-4" />
 
-                    @if (item.Options.Count > 0)
-                    {
-                        <div class="mt-3 text-sm text-gray-300">
-                            <p class="font-medium">Options:</p>
-                            <ul class="list-disc list-inside">
-                                @foreach (var group in item.Options)
-                                {
-                                    <li class="mt-1">
-                                        <span class="font-semibold">@group.GroupName</span>
-                                        (@(group.IsRequired ? "Required" : "Optional"))
-                                        <ul class="ml-4">
-                                            @foreach (var opt in group.OptionItems)
-                                            {
-                                                <li>
-                                                    - @opt.OptionName
-                                                    (@(opt.AdditionalPrice > 0 ? "R" + opt.AdditionalPrice.ToString("0.00") : "Free"))
-                                                </li>
-                                            }
-                                        </ul>
-                                    </li>
-                                }
-                            </ul>
+                    <!-- Right: Content -->
+                    <div class="flex flex-col justify-between flex-grow">
+                        <div>
+                            <h4 class="text-md font-bold text-white">@item.Name</h4>
+                            <p class="text-yellow-400 font-semibold text-sm mb-1">R @item.Price</p>
+                            <p class="text-xs text-gray-400">@item.Description</p>
+
+                            <!-- Quantity -->
+                            <div class="flex items-center gap-3 mt-3">
+                                <button class="w-8 h-8 flex items-center justify-center bg-white text-black rounded-full text-lg font-bold">−</button>
+                                <span class="text-white text-sm">1</span>
+                                <button class="w-8 h-8 flex items-center justify-center bg-white text-black rounded-full text-lg font-bold">+</button>
+                            </div>
+
+
+                            <!-- Add to Cart -->
+                            <div class="mt-3">
+                                <button class="flex items-center justify-center gap-2 bg-white text-black px-4 py-2 text-sm font-semibold rounded-full hover:bg-yellow-500 transition w-full">
+                                    <i class="fa fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
                         </div>
-                    }
+                    </div>
                 </div>
             }
+
+
         </div>
     }
 </div>
