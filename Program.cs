@@ -44,7 +44,7 @@ using (var scope = app.Services.CreateScope())
 async Task SeedRolesAndAdminAsync(RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager)
 
 {
-    string[] roles = { "Admin", "Customer", "Driver" };
+    string[] roles = { "Admin", "Customer", "Driver", "KitchenStaff" };
 
     foreach (var role in roles)
     {

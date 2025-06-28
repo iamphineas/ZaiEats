@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ZaiEats.Data;
 
@@ -11,9 +12,11 @@ using ZaiEats.Data;
 namespace ZaiEats.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250628230549_kitchenStaffCreation")]
+    partial class kitchenStaffCreation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -266,31 +269,6 @@ namespace ZaiEats.Data.Migrations
                     b.HasKey("DriverId");
 
                     b.ToTable("Drivers");
-                });
-
-            modelBuilder.Entity("ZaiEats.Models.KitchenStaff", b =>
-                {
-                    b.Property<int>("KitchenStaffId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("KitchenStaffId"));
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("KitchenStaffId");
-
-                    b.ToTable("KitchenStaffs");
                 });
 
             modelBuilder.Entity("ZaiEats.Models.MenuCategory", b =>

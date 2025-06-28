@@ -12,6 +12,7 @@ namespace ZaiEats.Data
         }
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Driver> Drivers { get; set; }
+        public DbSet<KitchenStaff> KitchenStaffs { get; set; }
         public DbSet<MenuCategory> MenuCategories { get; set; }
         public DbSet<MenuItem> MenuItems { get; set; }
         public DbSet<MenuOptionGroup> MenuOptionGroups { get; set; }

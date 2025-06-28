@@ -87,13 +87,16 @@
                 var user = await UserManager.GetUserAsync(User);
                 var fullName = user?.FullName ?? "User";
                 var initial = !string.IsNullOrEmpty(fullName) ? fullName.Substring(0, 1).ToUpper() : "?";
+                var parts = fullName.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                var firstName = parts.FirstOrDefault() ?? "";
+                var lastName = parts.Length > 1 ? string.Join(' ', parts.Skip(1)) : "";
 
 
                 <div class="flex flex-col items-center mb-4">
                     <div class="w-12 h-12 rounded-full bg-yellow-800 text-white flex items-center justify-center text-lg  shadow-lg">
                         @initial
                     </div>
-                    <span class="mt-2 text-sm text-white text-center">Welcome @fullName</span>
+                    <span class="mt-2 text-sm text-white text-center">Welcome @firstName</span>
 
                 </div>
             }
@@ -129,6 +132,12 @@
                             <i class="fas fa-truck"></i> Add Driver
                         </a>
                     </li>
+                    <li>
+                        <a class="flex items-center gap-2 hover:bg-white hover:text-black transition rounded-full px-4 py-2"
+                           asp-controller="KitchenStaff" asp-action="CreateKitchenStaff">
+                            <i class="fas fa-user-chef"></i> Add Kitchen Staff
+                        </a>
+                    </li>
 
                 }
                 @if (User.IsInRole("Driver"))
@@ -149,27 +158,36 @@
                         </a>
                     </li>
                 }
+                @if (User.IsInRole("KitchenStaff"))
+                {
+                    <li>
+                        <a class="flex items-center gap-2 hover:bg-white hover:text-black transition rounded-full px-4 py-2" asp-controller="KitchenStaff" asp-action="IncomingOrders">
+                            <i class="fas fa-receipt"></i>
+                            Incoming Orders
+                        </a>
+                    </li>
+                }
 
                 @if (User.IsInRole("Customer"))
                 {
                     <li>
-                        <a class="flex items-center gap-2 hover:bg-white hover:text-black transition rounded-full px-4 py-2" href="#">
+                        <a class="flex items-center gap-2 hover:bg-white hover:text-black transition rounded-full px-4 py-2" asp-controller="Customer" asp-action="Profile">
                             <i class="fas fa-user"></i> Profile
                         </a>
                     </li>
                     <li>
-                        <a class="flex items-center gap-2 hover:bg-white hover:text-black transition rounded-full px-4 py-2" href="#">
+                        <a class="flex items-center gap-2 hover:bg-white hover:text-black transition rounded-full px-4 py-2" asp-controller="Home" asp-action="Index">                            
                             <i class="fas fa-store"></i> Restaurants
                         </a>
                     </li>
                    
                     <li>
-                        <a class="flex items-center gap-2 hover:bg-white hover:text-black transition rounded-full px-4 py-2" href="#">
+                        <a class="flex items-center gap-2 hover:bg-white hover:text-black transition rounded-full px-4 py-2" asp-controller="Customer" asp-action="Cart">
                             <i class="fas fa-shopping-cart"></i> My Cart
                         </a>
                     </li>
                     <li>
-                        <a class="flex items-center gap-2 hover:bg-white hover:text-black transition rounded-full px-4 py-2" href="#">
+                        <a class="flex items-center gap-2 hover:bg-white hover:text-black transition rounded-full px-4 py-2" asp-controller="Customer" asp-action="Orders">
                             <i class="fas fa-receipt"></i> My Orders
                         </a>
                     </li>

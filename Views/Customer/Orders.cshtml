@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Orders";
+}
+
+<div class="container mt-12 px-4 py-8">
+    <!-- Heading -->
+    <h2 class="text-2xl font-bold text-center mb-6">Your Orders</h2>
+
+    <!-- Toggle Buttons -->
+    <div class="flex justify-center mb-4">
+        <button class="px-4 py-2 mx-2 rounded-md transition-all duration-300 bg-white text-black">
+            Active Orders
+        </button>
+        <button class="px-4 py-2 mx-2 rounded-md transition-all duration-300 bg-neutral-400/40">
+            Past Orders
+        </button>
+    </div>
+
+    <!-- Search -->
+    <div class="max-w-md mx-auto mb-6">
+        <input type="text"
+               placeholder="Search orders..."
+               class="w-full px-4 py-2 border rounded-lg text-sm"
+               value="" />
+    </div>
+
+    <!-- Orders List -->
+    <div class="space-y-4">
+
+        <!-- Order 1 -->
+        <div class="border rounded-xl p-4 shadow-xl" style="opacity: 1; transform: none;">
+            <p class="text-md font-semibold">Order ID: Z123</p>
+            <p class="text-xs text-neutral-400">Date: 4/1/2025</p>
+            <p class="text-sm font-medium mt-2 text-yellow-500">Status: Preparing</p>
+
+            <!-- Progress Bar -->
+            <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
+                <div class="h-2 rounded-full bg-yellow-400 w-[40%]"></div>
+            </div>
+
+            <p class="text-xs text-neutral-400 mt-1">Estimated Delivery: 30 mins</p>
+            <button class="text-blue-400/80 text-sm mt-2 active:underline">View Details</button>
+        </div>
+
+        <!-- Order 2 -->
+        <div class="border rounded-xl p-4 shadow-xl" style="opacity: 1; transform: none;">
+            <p class="text-md font-semibold">Order ID: Z124</p>
+            <p class="text-xs text-neutral-400">Date: 4/2/2025</p>
+            <p class="text-sm font-medium mt-2 text-yellow-500">Status: Out for Delivery</p>
+
+            <!-- Progress Bar -->
+            <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
+                <div class="h-2 rounded-full bg-yellow-600 w-[80%]"></div>
+            </div>
+
+            <p class="text-xs text-neutral-400 mt-1">Estimated Delivery: 15 mins</p>
+            <button class="text-blue-400/80 text-sm mt-2 active:underline">View Details</button>
+        </div>
+
+    </div>
+</div>
