@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thank You!</title>
+    <style>
+        /* Reset & base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* Container */
+        .container {
+            max-width: 600px;
+            margin: 5% auto;
+            background: #000000;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        /* Icon */
+        .icon {
+            font-size: 4rem;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+        /* Headings & text */
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        /* Button */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #4CAF50;
+            color: #fff;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+            .btn:hover {
+                background: #43A047;
+            }
+        /* Responsive tweaks */
+        @@media (max-width: 480px) {
+            .container
+
+        {
+            margin: 10% 1rem;
+            padding: 1.5rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        .icon {
+            font-size: 3rem;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">✅</div>
+        <h1>Thank You!</h1>
+        <p>Your order has been received and is now being processed. You will receive a confirmation email shortly with your order details.</p>
+        <a href="/" class="btn">Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,116 +1,81 @@
-﻿@{
-    ViewData["Title"] = "Cart";
+﻿@using ZaiEats.ViewModels
+@model CartViewModel
+
+@{
+    ViewData["Title"] = "Your Cart";
 }
-<div class="container mt-12 px-2 py-10 min-h-screen">
+
+<div class="container mt-12 px-2 py-10 min-h-screen text-white">
     <h1 class="text-2xl font-bold mb-6 text-center">Your Cart</h1>
 
     <div class="grid gap-6 lg:grid-cols-3">
-        <!-- Cart Items Section -->
+        <!-- 1) Items list -->
         <div class="lg:col-span-2 space-y-6">
-            <!-- Cart Item: Zai Burger -->
-            <div class="flex items-center justify-between p-4 py-4 shadow-md shadow-neutral-900 rounded-xl transition duration-300">
-                <div class="flex items-center space-x-6">
-                    <img src="/_next/image?url=%2Fdeal2.jpg&amp;w=256&amp;q=75"
-                         alt="Zai Burger"
-                         class="object-cover rounded-md"
-                         width="80" height="80"
-                         style="color: transparent;"
-                         loading="lazy"
-                         decoding="async" />
-                    <div>
-                        <p class="text-md font-medium">Zai Burger</p>
-                        <p class="text-neutral-500 text-sm">R85</p>
-                    </div>
-                </div>
-                <div class="flex flex-col items-end space-y-2">
-                    <p class="text-lg font-semibold">R170</p>
+            @foreach (var item in Model.CartItems)
+            {
+                <div class="flex items-center justify-between p-4 shadow-md rounded-xl bg-gray-800">
                     <div class="flex items-center space-x-4">
-                        <button class="text-xl text-red-600 active:text-red-800 cursor-pointer">-</button>
-                        <span class="text-xs font-medium">QTY: 2</span>
-                        <button class="text-xl text-green-600 active:text-green-800 cursor-pointer">+</button>
+                        <!-- TODO: replace with real image -->
+                        <img src="@item.ImageUrl"
+                             alt="@item.Name"
+                             class="w-16 h-16 object-cover rounded-md" />
+                        <div>
+                            <p class="font-medium">@item.Name</p>
+                            <p class="text-sm text-gray-400">
+                                Unit R @item.UnitPrice.ToString("F2") × @item.Quantity
+                            </p>
+                            @if (item.Options.Any())
+                            {
+                                <ul class="text-sm text-gray-300">
+                                    @foreach (var opt in item.Options)
+                                    {
+                                        <li>+ @opt.OptionName (R @opt.AdditionalPrice.ToString("F2"))</li>
+                                    }
+                                </ul>
+                            }
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="font-semibold">R @item.LineTotal.ToString("F2")</p>
+                        <form asp-action="RemoveFromCart" method="post" class="mt-1">
+                            <input type="hidden" name="menuItemId" value="@item.MenuItemId" />
+                            <button type="submit"
+                                    class="text-red-500 hover:text-red-700">
+                                Remove
+                            </button>
+                        </form>
                     </div>
                 </div>
-            </div>
-
-            <!-- Cart Item: Pizza -->
-            <div class="flex items-center justify-between p-4 py-4 shadow-md shadow-neutral-900 rounded-xl transition duration-300">
-                <div class="flex items-center space-x-6">
-                    <img src="/_next/image?url=%2Fdeal3.png&amp;w=256&amp;q=75"
-                         alt="Pizza"
-                         class="object-cover rounded-md"
-                         width="80" height="80"
-                         style="color: transparent;"
-                         loading="lazy"
-                         decoding="async" />
-                    <div>
-                        <p class="text-md font-medium">Pizza</p>
-                        <p class="text-neutral-500 text-sm">R120</p>
-                    </div>
-                </div>
-                <div class="flex flex-col items-end space-y-2">
-                    <p class="text-lg font-semibold">R120</p>
-                    <div class="flex items-center space-x-4">
-                        <button class="text-xl text-red-600 active:text-red-800 cursor-pointer">-</button>
-                        <span class="text-xs font-medium">QTY: 1</span>
-                        <button class="text-xl text-green-600 active:text-green-800 cursor-pointer">+</button>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
 
-        <!-- Divider Line -->
-        <div class="w-full h-[1px] bg-yellow-500/50 opacity-10 mt-6"></div>
+        <!-- 2) Divider -->
+        <div class="w-full h-px bg-gray-600 mt-6"></div>
 
-        <!-- Order Summary -->
-        <div class="p-6 rounded-xl shadow-md">
-            <!-- Delivery Options -->
-            <div class="flex justify-center gap-4 mb-4">
-                <label class="flex items-center gap-2 cursor-pointer">
-                    <input class="accent-yellow-600" type="radio" name="deliveryOption" value="delivery" checked />
-                    <span class="text-sm font-medium">Delivery</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                    <input class="accent-yellow-600" type="radio" name="deliveryOption" value="collection" />
-                    <span class="text-sm font-medium">Collection</span>
-                </label>
-            </div>
+        <!-- 3) Summary -->
+        <div class="p-6 rounded-xl shadow-md bg-gray-900">
+            <h2 class="text-xl font-semibold mb-4">Order Summary</h2>
 
-            <!-- Summary Details -->
-            <h2 class="text-xl font-semibold mb-2">Order Summary</h2>
-            <div class="text-sm text-gray-500 mb-4">
-                Estimated delivery: <span class="font-medium text-black">40 mins</span>
-            </div>
-            <div class="flex justify-between mb-2 text-sm">
+            <div class="flex justify-between mb-2">
                 <span>Subtotal</span>
-                <span>R 290</span>
+                <span>R @Model.Subtotal.ToString("F2")</span>
             </div>
-            <div class="flex justify-between mb-2 text-sm">
+            <div class="flex justify-between mb-2">
                 <span>Delivery</span>
-                <span>R 25</span>
+                <span>R @Model.DeliveryFee.ToString("F2")</span>
             </div>
-            <div class="border-t border-gray-300 my-3"></div>
+            <hr class="border-gray-600 my-3" />
             <div class="flex justify-between font-bold text-lg">
                 <span>Total</span>
-                <span>R 315</span>
+                <span>R @Model.Total.ToString("F2")</span>
             </div>
 
-            <!-- Promo Code -->
-            <div class="mt-4">
-                <input type="text"
-                       placeholder="Promo Code"
-                       class="w-full p-2 rounded-lg border border-gray-300 text-sm focus:outline-none" />
-                <button class="mt-4 w-full py-1 rounded-lg bg-blue-600 text-white active:bg-blue-800 transition">
-                    Apply Promo Code
+            <form asp-controller="Payments" asp-action="Checkout" method="get">
+                <button type="submit"
+                        class="mt-6 w-full py-2 bg-green-600 text-white rounded-lg">
+                    Proceed to Checkout
                 </button>
-            </div>
-
-            <!-- Action Buttons -->
-            <button class="mt-8 w-full text-black py-2 rounded-lg bg-yellow-500 active:bg-white active:text-black transition cursor-pointer">
-                Browse Restaurants
-            </button>
-            <button class="mt-6 w-full py-2 rounded-lg bg-green-900/60 text-white active:bg-white active:text-black transition cursor-pointer">
-                Proceed to Checkout
-            </button>
+            </form>
         </div>
     </div>
 </div>

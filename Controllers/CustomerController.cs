@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ZaiEats.Data;
 using ZaiEats.Models;
+using ZaiEats.Services;
+using ZaiEats.ViewModels;
 
 namespace ZaiEats.Controllers
 {
@@ -10,11 +12,13 @@ namespace ZaiEats.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly Cart _cart;
 
-        public CustomerController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        public CustomerController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, Cart cart)
         {
             _context = context;
             _userManager = userManager;
+            _cart = cart;
         }
 
         // GET: /Customer/Profile
@@ -45,7 +49,12 @@ namespace ZaiEats.Controllers
         // GET: /Customer/Cart
         public IActionResult Cart()
         {
-            return View();
+            var vm = new CartViewModel
+            {
+                CartItems = _cart.GetItems().ToList(),   // or cast to List<CartItem>
+                                                         // DeliveryFee etc. come from VM defaults
+            };
+            return View(vm);
         }
 
         // GET: /Customer/Orders

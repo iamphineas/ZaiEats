@@ -1,6 +1,8 @@
-﻿@using Microsoft.AspNetCore.Identity
+﻿@using ZaiEats.Services
+@using Microsoft.AspNetCore.Identity
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
+@inject Cart CartService
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,11 +38,12 @@
                     Zai<span class="font-semibold">Eats</span>
                 </a>
             </div>
-            @if (SignInManager.IsSignedIn(User) && User.IsInRole("Customer"))
+            @if (SignInManager.IsSignedIn(User))
             {
-                <div class="absolute z-10 right-4 top-1/2 transform -translate-y-1/2">
-                    <a href="#" class="text-white hover:text-yellow-700 transition">
-                        <i class="fas fa-shopping-cart text-md"></i>
+                <div class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                    <a asp-controller="Customer" asp-action="Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">(@CartService.TotalItems())</span>
                     </a>
                 </div>
             }
@@ -268,5 +271,48 @@
     </script>
 
     @await RenderSectionAsync("Scripts", required: false)
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          document.querySelectorAll('.add-to-cart').forEach(btn => {
+            btn.addEventListener('click', async () => {
+              const menuItemId = +btn.getAttribute('data-menuitemid');
+              const qty = +btn.parentNode.querySelector('.qty').textContent;
+              const optionItemIds = [];  // or read from checked checkboxes, etc.
+
+              // Grab the antiforgery token if you’re using one:
+              const token = document
+                .querySelector('input[name="__RequestVerificationToken"]')
+                ?.value;
+
+              const resp = await fetch('@Url.Action("AddToCart", "Cart")', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'RequestVerificationToken': token  // if you need it
+                },
+                body: JSON.stringify({ menuItemId, qty, optionItemIds })
+              });
+
+              const result = await resp.json();
+              if (result.success) {
+                // Update the little badge in the header:
+                const badge = document.getElementById('cart-count');
+                if (badge) badge.textContent = `(${result.totalItems})`;
+
+                // Optional: give user feedback
+                alert(`Added to cart! You now have ${result.totalItems} item${result.totalItems!==1?'s':''}.`);
+              } else {
+                alert('Sorry, could not add to cart.');
+              }
+            });
+          });
+        });
+    </script>
+
+
+
 </body>
 </html>

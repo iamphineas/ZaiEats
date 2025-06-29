@@ -64,11 +64,20 @@
 
 
                             <!-- Add to Cart -->
-                            <div class="mt-3">
-                                <button class="flex items-center justify-center gap-2 bg-white text-black px-4 py-2 text-sm font-semibold rounded-full hover:bg-yellow-500 transition w-full">
+                            <div class="mt-3 flex items-center gap-2">
+                                <button data-menuitemid="@item.MenuItemId"
+                                        class="add-to-cart flex-1 flex items-center justify-center gap-2
+                 bg-white text-black px-4 py-2 text-sm font-semibold
+                 rounded-full hover:bg-yellow-500 transition">
                                     <i class="fa fa-shopping-cart"></i> Add to Cart
                                 </button>
+
+                                <!-- Quantity controls -->
+                                <button class="qty-decrement w-8 h-8 flex items-center justify-center bg-white text-black rounded-full">−</button>
+                                <span class="qty text-white">1</span>
+                                <button class="qty-increment w-8 h-8 flex items-center justify-center bg-white text-black rounded-full">+</button>
                             </div>
+
                         </div>
                     </div>
                 </div>

@@ -77,6 +77,7 @@ namespace ZaiEats.Controllers
                                 .Where(m => m.MenuCategoryId == c.MenuCategoryId)
                                 .Select(m => new
                                 {
+                                    m.MenuItemId,
                                     m.Name,
                                     m.Description,
                                     m.Price,
