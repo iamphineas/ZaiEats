@@ -1,0 +1,86 @@
+﻿@model ZaiEats.Models.QuotationRequest
+
+@{
+    ViewData["Title"] = "Request a Quotation";
+}
+
+<div class="max-w-md mx-auto mt-24 px-4 py-6 rounded-xl shadow-white shadow-sm bg-black">
+    <h2 class="text-xl font-bold text-center text-yellow-800 mb-4">Request Catering Quotation</h2>
+
+    <form asp-action="Request" method="post" class="space-y-4 text-sm">
+        <!-- Event Type -->
+        <div>
+            <label asp-for="EventType" class="text-gray-500 font-medium mb-1"></label>
+            <input asp-for="EventType" class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent" />
+            <span asp-validation-for="EventType" class="text-red-500 text-xs mt-1 block"></span>
+        </div>
+
+        <!-- Number of Guests -->
+        <div>
+            <label asp-for="NumberOfGuests" class="text-gray-500 font-medium mb-1"></label>
+            <input asp-for="NumberOfGuests" type="number" class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent" />
+            <span asp-validation-for="NumberOfGuests" class="text-red-500 text-xs mt-1 block"></span>
+        </div>
+
+        <!-- Date & Time -->
+        <div>
+            <label asp-for="EventDateTime" class="text-gray-500 font-medium mb-1"></label>
+            <input asp-for="EventDateTime" type="datetime-local"
+                   class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 text-white bg-black" />
+            <span asp-validation-for="EventDateTime" class="text-red-500 text-xs mt-1 block"></span>
+        </div>
+
+        <!-- Event Description -->
+        <div>
+            <label asp-for="EventDescription" class="text-gray-500 font-medium mb-1"></label>
+            <textarea asp-for="EventDescription" rows="3" class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent"></textarea>
+            <span asp-validation-for="EventDescription" class="text-red-500 text-xs mt-1 block"></span>
+        </div>
+
+        <!-- Full Name -->
+        <div>
+            <label asp-for="FullName" class="text-gray-500 font-medium mb-1"></label>
+            <input asp-for="FullName" class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent" />
+            <span asp-validation-for="FullName" class="text-red-500 text-xs mt-1 block"></span>
+        </div>
+
+        <!-- Email -->
+        <div>
+            <label asp-for="Email" class="text-gray-500 font-medium mb-1"></label>
+            <input asp-for="Email" type="email" class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent" />
+            <span asp-validation-for="Email" class="text-red-500 text-xs mt-1 block"></span>
+        </div>
+
+        <!-- Mobile Number -->
+        <div>
+            <label asp-for="MobileNumber" class="text-gray-500 font-medium mb-1"></label>
+            <input asp-for="MobileNumber" class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent" />
+            <span asp-validation-for="MobileNumber" class="text-red-500 text-xs mt-1 block"></span>
+        </div>
+
+        <!-- Location -->
+        <div>
+            <label asp-for="EventLocation" class="text-gray-500 font-medium mb-1"></label>
+            <input asp-for="EventLocation" class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent" />
+            <span asp-validation-for="EventLocation" class="text-red-500 text-xs mt-1 block"></span>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit"
+                class="w-full py-2 mt-2 bg-yellow-800 text-white font-semibold rounded-md hover:bg-yellow-700 transition">
+            Submit Request
+        </button>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <style>
+        /* Fix calendar icon color on dark background */
+        input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            opacity: 1;
+        }
+    </style>
+}

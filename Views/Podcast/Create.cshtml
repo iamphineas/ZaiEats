@@ -1,0 +1,50 @@
+﻿@model ZaiEats.ViewModels.PodcastEpisodeViewModel
+
+@{
+    ViewData["Title"] = "Add Podcast Episode";
+}
+
+<div class="max-w-2xl mx-auto mt-24 px-4 py-6">
+    <h2 class="text-2xl font-bold text-yellow-500 mb-6 text-center">
+        <i class="fas fa-plus-circle text-yellow-400 mr-2"></i> Add New Podcast Episode
+    </h2>
+
+    <form asp-action="Create" method="post" enctype="multipart/form-data" class="space-y-4">
+        <div>
+            <label asp-for="Title" class="block text-sm font-medium text-yellow-400">Title</label>
+            <input asp-for="Title" class="w-full bg-zinc-800 text-white rounded px-3 py-2" />
+            <span asp-validation-for="Title" class="text-red-500 text-sm"></span>
+        </div>
+
+        <div>
+            <label asp-for="Description" class="block text-sm font-medium text-yellow-400">Description</label>
+            <textarea asp-for="Description" rows="3" class="w-full bg-zinc-800 text-white rounded px-3 py-2"></textarea>
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium text-yellow-400">Upload Teaser Video (.mp4)</label>
+            <input type="file" name="teaserVideo" accept="video/mp4" class="block mt-1 text-white" required />
+        </div>
+
+        <div>
+            <label asp-for="FullEpisodeUrl" class="block text-sm font-medium text-yellow-400">YouTube Link</label>
+            <input asp-for="FullEpisodeUrl" class="w-full bg-zinc-800 text-white rounded px-3 py-2" />
+            <span asp-validation-for="FullEpisodeUrl" class="text-red-500 text-sm"></span>
+        </div>
+
+        <div>
+            <label asp-for="Tags" class="block text-sm font-medium text-yellow-400">Tags (comma separated)</label>
+            <input asp-for="Tags" class="w-full bg-zinc-800 text-white rounded px-3 py-2" />
+        </div>
+
+        <div class="text-right">
+            <button type="submit" class="bg-yellow-600 hover:bg-yellow-500 text-white px-6 py-2 rounded">
+                Save Episode
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

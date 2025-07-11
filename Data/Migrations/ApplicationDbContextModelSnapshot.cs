@@ -228,6 +228,38 @@ namespace ZaiEats.Data.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("ZaiEats.Models.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AdminReply")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NewsEventId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NewsEventId");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("ZaiEats.Models.Driver", b =>
                 {
                     b.Property<int>("DriverId")
@@ -415,6 +447,160 @@ namespace ZaiEats.Data.Migrations
                     b.ToTable("MenuOptionItems");
                 });
 
+            modelBuilder.Entity("ZaiEats.Models.NewsEvent", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DressCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("EventDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Likes")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NewsEvents");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.PodcastEpisode", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullEpisodeUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("PublishedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Tags")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TeaserVideoPath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PodcastEpisodes");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.PostLike", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("LikedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("NewsEventId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PostLikes");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.QuotationRequest", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("EventDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EventDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EventLocation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EventType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MobileNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumberOfGuests")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("SubmittedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("QuotationRequests");
+                });
+
             modelBuilder.Entity("ZaiEats.Models.Restaurant", b =>
                 {
                     b.Property<int>("RestaurantId")
@@ -437,6 +623,30 @@ namespace ZaiEats.Data.Migrations
                     b.HasKey("RestaurantId");
 
                     b.ToTable("Restaurants");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.RestaurantManager", b =>
+                {
+                    b.Property<int>("RestaurantManagerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RestaurantManagerId"));
+
+                    b.Property<string>("ManagerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("RestaurantId")
+                        .HasColumnType("int");
+
+                    b.HasKey("RestaurantManagerId");
+
+                    b.HasIndex("ManagerId");
+
+                    b.HasIndex("RestaurantId");
+
+                    b.ToTable("RestaurantManagers");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -488,6 +698,17 @@ namespace ZaiEats.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.Comment", b =>
+                {
+                    b.HasOne("ZaiEats.Models.NewsEvent", "NewsEvent")
+                        .WithMany()
+                        .HasForeignKey("NewsEventId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("NewsEvent");
                 });
 
             modelBuilder.Entity("ZaiEats.Models.MenuCategory", b =>
@@ -542,6 +763,30 @@ namespace ZaiEats.Data.Migrations
                     b.Navigation("MenuOptionGroup");
                 });
 
+            modelBuilder.Entity("ZaiEats.Models.RestaurantManager", b =>
+                {
+                    b.HasOne("ZaiEats.Models.ApplicationUser", "Manager")
+                        .WithMany("RestaurantManagers")
+                        .HasForeignKey("ManagerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ZaiEats.Models.Restaurant", "Restaurant")
+                        .WithMany("RestaurantManagers")
+                        .HasForeignKey("RestaurantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Manager");
+
+                    b.Navigation("Restaurant");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.ApplicationUser", b =>
+                {
+                    b.Navigation("RestaurantManagers");
+                });
+
             modelBuilder.Entity("ZaiEats.Models.MenuCategory", b =>
                 {
                     b.Navigation("MenuItems");
@@ -555,6 +800,11 @@ namespace ZaiEats.Data.Migrations
             modelBuilder.Entity("ZaiEats.Models.MenuOptionGroup", b =>
                 {
                     b.Navigation("OptionItems");
+                });
+
+            modelBuilder.Entity("ZaiEats.Models.Restaurant", b =>
+                {
+                    b.Navigation("RestaurantManagers");
                 });
 #pragma warning restore 612, 618
         }

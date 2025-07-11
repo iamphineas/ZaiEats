@@ -1,0 +1,48 @@
+﻿@model ZaiEats.Models.PodcastEpisode
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="max-w-3xl mx-auto mt-24 px-4 py-6 bg-black text-white rounded-xl shadow-lg">
+    <!-- Teaser Video -->
+    <div class="w-full aspect-w-16 aspect-h-9 mb-5 rounded-lg overflow-hidden border border-gray-700">
+        <video class="w-full h-full object-cover" controls>
+            <source src="@Model.TeaserVideoPath" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Metadata -->
+    <div class="text-xs uppercase text-yellow-400 mb-2">
+        Published: @Model.PublishedAt.ToString("dd MMM yyyy")
+    </div>
+
+    <h1 class="text-3xl font-bold text-yellow-500 mb-4">@Model.Title</h1>
+
+    <p class="text-sm text-gray-300 leading-relaxed mb-6">
+        @Model.Description
+    </p>
+
+    @if (!string.IsNullOrEmpty(Model.Tags))
+    {
+        <p class="text-xs text-gray-400 italic mb-4">
+            Tags: @Model.Tags
+        </p>
+    }
+
+    <a href="@Model.FullEpisodeUrl" target="_blank"
+       class="inline-flex items-center text-yellow-400 hover:text-yellow-300 font-medium text-sm transition">
+        🎥 Watch Full Episode on YouTube <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+    </a>
+
+    <div class="mt-6">
+        <a asp-action="Index" class="text-sm text-gray-400 hover:underline">
+            ← Back to All Episodes
+        </a>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+}

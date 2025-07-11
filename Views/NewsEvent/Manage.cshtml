@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ZaiEats.Models.NewsEvent>
+
+@{
+    ViewData["Title"] = "Manage News & Events";
+}
+
+<div class="max-w-3xl mx-auto mt-20 px-4 text-sm">
+    <h2 class="text-xl font-bold text-yellow-700 text-center mb-6">Manage News / Events / Specials</h2>
+
+    <div class="mb-4 text-right">
+        <a asp-action="Create"
+           class="bg-yellow-700 hover:bg-yellow-600 text-white font-semibold px-3 py-1.5 text-sm rounded transition">
+            + Add New Post
+        </a>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="text-center text-gray-400 text-sm">No posts available.</div>
+    }
+    else
+    {
+        <div class="space-y-4">
+            @foreach (var item in Model)
+            {
+                <div class="bg-zinc-900 border border-zinc-700 rounded-md px-4 py-3 flex items-center justify-between gap-4 flex-wrap sm:flex-nowrap">
+                    <!-- Left: Title + Meta -->
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-base font-semibold text-yellow-500 truncate">@item.Title</h3>
+                        <p class="text-xs text-gray-400 mb-1">
+                            @item.EventDateTime.ToString("yyyy-MM-dd HH:mm") • @item.Category
+                        </p>
+                        <p class="text-sm text-gray-300 line-clamp-2">@item.Description</p>
+                    </div>
+
+                    <!-- Thumbnail -->
+                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                        <img src="@item.ImageUrl"
+                             alt="thumbnail"
+                             class="w-16 h-14 object-cover rounded border border-gray-600" />
+                    }
+
+                    <!-- Actions -->
+                    <div class="flex flex-col items-end gap-1 text-xs whitespace-nowrap">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="text-yellow-400 hover:underline">Edit</a>
+                        <form asp-action="Delete" asp-route-id="@item.Id" method="post" onsubmit="return confirm('Delete this post?');">
+                            <button type="submit" class="text-red-500 hover:underline">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+}

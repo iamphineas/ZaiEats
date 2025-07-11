@@ -54,13 +54,34 @@ using (var scope = app.Services.CreateScope())
 async Task SeedRolesAndAdminAsync(RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager)
 
 {
-    string[] roles = { "Admin", "Customer", "Driver", "KitchenStaff" };
+    string[] roles = { "Admin", "Customer", "Driver", "KitchenStaff", "Manager" };
 
     foreach (var role in roles)
     {
         if (!await roleManager.RoleExistsAsync(role))
         {
             await roleManager.CreateAsync(new IdentityRole(role));
+        }
+    }
+
+    var customerEmail = "customer@zaieats.com";
+    var customerPassword = "Customer@123";
+
+    var existingCustomer = await userManager.FindByEmailAsync(customerEmail);
+    if (existingCustomer == null)
+    {
+        var customerUser = new ApplicationUser
+        {
+            UserName = customerEmail,
+            Email = customerEmail,
+            EmailConfirmed = true,
+            FullName = "Test Customer"
+        };
+
+        var result = await userManager.CreateAsync(customerUser, customerPassword);
+        if (result.Succeeded)
+        {
+            await userManager.AddToRoleAsync(customerUser, "Customer");
         }
     }
 

@@ -1,0 +1,44 @@
+﻿@model List<ZaiEats.ViewModels.ManagerListViewModel>
+
+<div class="min-h-screen px-4 py-6 bg-black text-white">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-amber-500 mb-8 text-center">All Managers</h2>
+
+        @if (!Model.Any())
+        {
+            <div class="text-center text-gray-400">No managers found.</div>
+        }
+        else
+        {
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                @foreach (var manager in Model)
+                {
+                    <div class="bg-[#101010] border border-amber-500 text-white rounded-xl p-5 shadow-md hover:shadow-lg transition">
+                        <div class="mb-3">
+                            <h3 class="text-lg font-semibold">@manager.FullName</h3>
+                            <p class="text-sm text-gray-300">@manager.Email</p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-medium text-amber-400 mb-1">Assigned Restaurants:</p>
+
+                            @if (!manager.AssignedRestaurants.Any())
+                            {
+                                <p class="text-sm text-red-400">Not assigned</p>
+                            }
+                            else
+                            {
+                                <ul class="list-disc list-inside text-sm text-gray-200">
+                                    @foreach (var rest in manager.AssignedRestaurants)
+                                    {
+                                        <li>@rest</li>
+                                    }
+                                </ul>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>

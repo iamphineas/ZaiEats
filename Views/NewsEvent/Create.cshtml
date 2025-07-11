@@ -1,0 +1,94 @@
+﻿@model ZaiEats.Models.NewsEvent
+
+@{
+    ViewData["Title"] = "Create News / Event / Special";
+}
+
+<div class="max-w-xl mx-auto mt-24 px-4 py-6 rounded-xl shadow-white shadow-sm bg-black">
+    <h2 class="text-2xl font-bold text-yellow-800 mb-6 text-center">Create News / Event / Special</h2>
+
+    <div asp-validation-summary="ModelOnly" class="text-red-500 text-sm mb-4"></div>
+
+    <form asp-action="Create" method="post" enctype="multipart/form-data" class="space-y-4 text-sm">
+        <!-- Title -->
+        <div>
+            <label asp-for="Title" class="text-gray-500 font-medium mb-1"></label>
+            <input asp-for="Title" class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent" />
+            <span asp-validation-for="Title" class="text-red-500 text-xs mt-1 block"></span>
+        </div>
+
+        <!-- Description -->
+        <div>
+            <label asp-for="Description" class="text-gray-500 font-medium mb-1"></label>
+            <textarea asp-for="Description" rows="4" class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent"></textarea>
+            <span asp-validation-for="Description" class="text-red-500 text-xs mt-1 block"></span>
+        </div>
+
+        <!-- Date & Time -->
+        <div>
+            <label asp-for="EventDateTime" class="text-gray-500 font-medium mb-1"></label>
+            <input asp-for="EventDateTime" type="datetime-local"
+                   class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 text-white bg-black" />
+            <span asp-validation-for="EventDateTime" class="text-red-500 text-xs mt-1 block"></span>
+        </div>
+
+        <!-- Location -->
+        <div>
+            <label asp-for="Location" class="text-gray-500 font-medium mb-1"></label>
+            <input asp-for="Location" class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent" />
+            <span asp-validation-for="Location" class="text-red-500 text-xs mt-1 block"></span>
+        </div>
+
+        <!-- Dress Code -->
+        <div>
+            <label asp-for="DressCode" class="text-gray-500 font-medium mb-1"></label>
+            <input asp-for="DressCode" class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent" />
+            <span asp-validation-for="DressCode" class="text-red-500 text-xs mt-1 block"></span>
+        </div>
+
+        <!-- Category -->
+        <div>
+            <label asp-for="Category" class="text-gray-500 font-medium mb-1">Type</label>
+            <select asp-for="Category" class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 bg-black text-white">
+                <option value="">-- Select Type --</option>
+                <option value="News">News</option>
+                <option value="Event">Event</option>
+                <option value="Special">Special</option>
+            </select>
+            <span asp-validation-for="Category" class="text-red-500 text-xs mt-1 block"></span>
+        </div>
+
+        <!-- Image Upload -->
+        <div>
+            <label class="text-gray-500 font-medium mb-1">Upload Banner Image</label>
+            <input type="file" name="ImageFile" class="w-full mt-2 border border-gray-300 rounded-md px-3 py-1.5 text-white bg-transparent" />
+        </div>
+
+        <!-- Hidden Image URL (for form model binding) -->
+        <input asp-for="ImageUrl" type="hidden" />
+
+        <!-- Submit -->
+        <button type="submit" class="w-full py-2 bg-yellow-800 text-white font-semibold rounded-md hover:bg-yellow-700 transition">
+            Save Post
+        </button>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <style>
+        input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+            filter: brightness(0) invert(1);
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        input[type="datetime-local"] {
+            color-scheme: dark;
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+}
+

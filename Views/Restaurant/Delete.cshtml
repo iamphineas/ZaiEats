@@ -1,0 +1,26 @@
+﻿@model ZaiEats.Models.Restaurant
+
+<div class="min-h-screen flex items-center justify-center bg-black px-4 py-10">
+    <div class="w-full max-w-md bg-zinc-900 text-white rounded-xl shadow-xl p-6 border border-zinc-800">
+        <h2 class="text-xl font-bold text-center text-amber-500 mb-4">Delete Restaurant</h2>
+        <p class="text-center text-gray-300 mb-6">
+            Are you sure you want to delete <strong class="text-white">@Model.Name</strong>?
+        </p>
+
+        <form asp-action="Delete" method="post" class="space-y-4">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="RestaurantId" />
+
+            <div class="flex justify-between">
+                <a asp-action="Index"
+                   class="bg-zinc-700 hover:bg-zinc-600 text-white font-medium px-4 py-2 rounded-lg transition">
+                    Cancel
+                </a>
+                <button type="submit"
+                        class="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-lg transition">
+                    Delete
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

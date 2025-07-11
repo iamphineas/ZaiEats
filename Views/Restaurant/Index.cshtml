@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ZaiEats.Models.Restaurant>
+
+<div class="min-h-screen bg-black text-white px-4 pt-8 pb-24 relative">
+    <div class="max-w-4xl mx-auto">
+
+        <!-- Responsive Heading -->
+        <h2 class="text-xl sm:text-2xl font-bold text-amber-500 mb-6 text-center sm:text-left">
+            Manage Restaurants
+        </h2>
+
+        <!-- No Restaurants -->
+        @if (!Model.Any())
+        {
+            <div class="text-center text-gray-400">No restaurants found.</div>
+        }
+        else
+        {
+            <!-- Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                @foreach (var restaurant in Model)
+                {
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-300">
+                        <img src="@restaurant.ImageUrl"
+                             alt="@restaurant.Name"
+                             class="w-full h-44 sm:h-48 object-cover" />
+
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-white truncate">@restaurant.Name</h3>
+                            <p class="text-sm text-gray-400 truncate">@restaurant.Description</p>
+
+                            <div class="mt-4 flex justify-between text-sm">
+                                <a asp-action="Edit" asp-route-id="@restaurant.RestaurantId"
+                                   class="text-blue-400 hover:underline">Edit</a>
+                                <a asp-action="Delete" asp-route-id="@restaurant.RestaurantId"
+                                   class="text-red-500 hover:underline">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    <!-- Floating Add Button -->
+    <a asp-action="CreateRestaurant"
+       class="fixed bottom-5 right-5 bg-amber-600 hover:bg-amber-700 text-white font-medium px-4 py-3 rounded-full shadow-lg transition text-sm sm:text-base z-50">
+        + Add Restaurant
+    </a>
+</div>

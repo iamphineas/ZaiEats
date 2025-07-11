@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ZaiEats.ViewModels.AdminCommentViewModel>
+@{
+    ViewData["Title"] = "Manage Comments";
+}
+
+<div class="max-w-5xl mx-auto mt-20 px-4 text-white">
+    <h2 class="text-2xl font-bold text-yellow-500 mb-6">
+        <i class="fas fa-tools mr-2 text-yellow-400"></i>Manage Comments
+    </h2>
+
+    @foreach (var comment in Model)
+    {
+        <div class="bg-zinc-800 p-4 rounded shadow mb-4 border border-zinc-700">
+            <div class="mb-2 text-sm text-yellow-400 font-semibold">
+                <i class="fas fa-user mr-1"></i> @comment.UserName on
+                <strong class="text-white">@comment.EventTitle</strong>
+                <span class="text-xs text-gray-400 ml-2">
+                    <i class="far fa-clock mr-1"></i>@comment.CreatedAt.ToLocalTime().ToString("g")
+                </span>
+            </div>
+
+            <p class="text-gray-300 mb-2">
+                <i class="fas fa-comment-dots mr-1 text-yellow-300"></i>@comment.Message
+            </p>
+
+            @if (!string.IsNullOrWhiteSpace(comment.AdminReply))
+            {
+                <div class="text-sm bg-zinc-700 rounded p-2 mb-2">
+                    <strong class="text-yellow-300">
+                        <i class="fas fa-reply mr-1"></i>Admin Reply:
+                    </strong>
+                    <span class="text-gray-200">@comment.AdminReply</span>
+                </div>
+            }
+
+            <form asp-action="ReplyToComment" method="post" class="flex gap-2 mt-2">
+                <input type="hidden" name="commentId" value="@comment.Id" />
+                <input type="text" name="reply" placeholder="Type a reply..."
+                       class="flex-grow px-3 py-1 rounded bg-zinc-900 text-white border border-zinc-600" />
+                <button type="submit" class="bg-yellow-600 hover:bg-yellow-500 text-white px-3 py-1 rounded">
+                    <i class="fas fa-paper-plane mr-1"></i>Reply
+                </button>
+            </form>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+}

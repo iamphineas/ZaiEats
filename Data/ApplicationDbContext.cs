@@ -10,6 +10,7 @@ namespace ZaiEats.Data
             : base(options)
         {
         }
+
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Driver> Drivers { get; set; }
         public DbSet<KitchenStaff> KitchenStaffs { get; set; }
@@ -17,6 +18,14 @@ namespace ZaiEats.Data
         public DbSet<MenuItem> MenuItems { get; set; }
         public DbSet<MenuOptionGroup> MenuOptionGroups { get; set; }
         public DbSet<MenuOptionItem> MenuOptionItems { get; set; }
+        public DbSet<QuotationRequest> QuotationRequests { get; set; }
+        public DbSet<NewsEvent> NewsEvents { get; set; }
+        public DbSet<PodcastEpisode> PodcastEpisodes { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<PostLike> PostLikes { get; set; }
+
+        // New linking table
+        public DbSet<RestaurantManager> RestaurantManagers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -29,11 +38,26 @@ namespace ZaiEats.Data
                 .HasForeignKey(mi => mi.RestaurantId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Optionally define cascade for categories
             modelBuilder.Entity<MenuCategory>()
                 .HasOne(mc => mc.Restaurant)
                 .WithMany()
                 .HasForeignKey(mc => mc.RestaurantId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Many-to-Many: Restaurant <-> ApplicationUser (as Manager)
+            modelBuilder.Entity<RestaurantManager>()
+                .HasKey(rm => rm.RestaurantManagerId);
+
+            modelBuilder.Entity<RestaurantManager>()
+                .HasOne(rm => rm.Restaurant)
+                .WithMany(r => r.RestaurantManagers)
+                .HasForeignKey(rm => rm.RestaurantId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<RestaurantManager>()
+                .HasOne(rm => rm.Manager)
+                .WithMany(u => u.RestaurantManagers)
+                .HasForeignKey(rm => rm.ManagerId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

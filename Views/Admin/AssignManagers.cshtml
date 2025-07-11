@@ -1,0 +1,35 @@
+﻿@using ZaiEats.ViewModels
+@model AssignManagerViewModel
+@{
+    ViewData["Title"] = "Assign Managers";
+}
+
+<h2 class="text-xl font-semibold mb-4">Assign Managers to @Model.RestaurantName</h2>
+
+<form asp-action="AssignManagers" method="post" class="space-y-4">
+    <input type="hidden" asp-for="RestaurantId" />
+
+    <div class="space-y-2">
+        @for (int i = 0; i < Model.AllManagers.Count; i++)
+        {
+            <div class="flex items-center bg-white p-3 rounded-lg shadow-sm">
+                <input type="checkbox"
+                       name="AllManagers[@i].IsAssigned"
+                       class="form-checkbox h-5 w-5 text-blue-600 mr-3"
+                @(Model.AllManagers[i].IsAssigned ? "checked" : "") />
+
+                <label class="text-sm font-medium text-gray-800">
+                    @Model.AllManagers[i].FullName
+                </label>
+
+                <input type="hidden" name="AllManagers[@i].ManagerId" value="@Model.AllManagers[i].ManagerId" />
+                <input type="hidden" name="AllManagers[@i].FullName" value="@Model.AllManagers[i].FullName" />
+            </div>
+        }
+    </div>
+
+    <button type="submit"
+            class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+        Save Assignments
+    </button>
+</form>

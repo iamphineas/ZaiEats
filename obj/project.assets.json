@@ -1676,6 +1676,25 @@
           "buildMultiTargeting/_._": {}
         }
       },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Identity.Core/8.0.12": {
         "type": "package",
         "dependencies": {
@@ -2244,6 +2263,21 @@
         },
         "runtime": {
           "lib/netstandard2.0/NuGet.Versioning.dll": {}
+        }
+      },
+      "PayFast/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "6.0.1",
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "lib/net6.0/PayFast.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/PayFast.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
@@ -5771,6 +5805,25 @@
         "tasks/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.Manifest.Task.dll"
       ]
     },
+    "Microsoft.Extensions.Http/6.0.0": {
+      "sha512": "15+pa2G0bAMHbHewaQIdr/y6ag2H3yh4rd9hTXavtWDzQBkvpe2RMqFg8BxDpcQWssmjmBApGPcw93QRz6YcMg==",
+      "type": "package",
+      "path": "microsoft.extensions.http/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Http.dll",
+        "lib/net461/Microsoft.Extensions.Http.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.xml",
+        "microsoft.extensions.http.6.0.0.nupkg.sha512",
+        "microsoft.extensions.http.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Microsoft.Extensions.Identity.Core/8.0.12": {
       "sha512": "gL9CiNR73pBGZX/W5Q+DYoys3pVG5JZMj3ACNjpFPOarceQS+/i6GMXJP+MXL9UtLLQ8W7QCPBkyL2kljYzr/Q==",
       "type": "package",
@@ -6945,6 +6998,18 @@
         "lib/netstandard2.0/NuGet.Versioning.dll",
         "nuget.versioning.6.11.0.nupkg.sha512",
         "nuget.versioning.nuspec"
+      ]
+    },
+    "PayFast/2.0.0": {
+      "sha512": "UQcIjSc4CsTN8q7UaEEG/8Lm0UwHZcRVIhR9nyWsqnmJqIDWhRladCWcB9JABSTzQBLOV3qLbS7mqVydXAx71A==",
+      "type": "package",
+      "path": "payfast/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/PayFast.dll",
+        "payfast.2.0.0.nupkg.sha512",
+        "payfast.nuspec"
       ]
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
@@ -8354,27 +8419,28 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.12",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.12",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.7"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.7",
+      "PayFast >= 2.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\erica\\.nuget\\packages\\": {},
+    "C:\\Users\\phine\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\ZaiEats.csproj",
+      "projectUniqueName": "C:\\Users\\phine\\source\\repos\\ZaiApp\\ZaiEats.csproj",
       "projectName": "ZaiEats",
-      "projectPath": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\ZaiEats.csproj",
-      "packagesPath": "C:\\Users\\erica\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\erica\\source\\repos\\ZaiEats\\ZaiEats\\obj\\",
+      "projectPath": "C:\\Users\\phine\\source\\repos\\ZaiApp\\ZaiEats.csproj",
+      "packagesPath": "C:\\Users\\phine\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\phine\\source\\repos\\ZaiApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\erica\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\phine\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8383,6 +8449,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8401,7 +8468,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -8434,6 +8501,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[8.0.7, )"
+          },
+          "PayFast": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           }
         },
         "imports": [
@@ -8455,7 +8526,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ZaiEats.Models.NewsEvent>
+
+@{
+    ViewData["Title"] = "Latest News & Events";
+    var commentCounts = ViewBag.CommentCounts as Dictionary<int, int>;
+}
+
+<div class="w-full max-w-6xl mx-auto mt-20 px-4 py-6">
+    <h2 class="text-2xl sm:text-3xl font-bold text-yellow-500 text-center mb-6">
+        <i class="fas fa-bolt text-yellow-400 mr-2"></i>Latest from Zai
+    </h2>
+
+    @if (!Model.Any())
+    {
+        <div class="text-center text-gray-400 text-sm">No news or events at this time.</div>
+    }
+    else
+    {
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            @foreach (var item in Model)
+            {
+                <div class="bg-zinc-900 rounded-md overflow-hidden border border-zinc-700 hover:shadow-lg transition-shadow">
+
+                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                        <a asp-action="Details" asp-route-id="@item.Id">
+                            <img src="@item.ImageUrl"
+                                 alt="@item.Title"
+                                 class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
+                        </a>
+                    }
+
+                    <div class="p-2 text-center">
+                        <a asp-action="Details" asp-route-id="@item.Id" class="block">
+                            <span class="text-yellow-400 text-sm font-semibold block">@item.Title</span>
+                            <span class="text-xs text-gray-400 block">@item.EventDateTime.ToString("yyyy-MM-dd HH:mm")</span>
+                        </a>
+
+                        <!-- Like & Comment icons -->
+                        <div class="mt-2 flex justify-start items-center gap-6 text-white text-sm px-4">
+                            <form asp-action="Like" asp-controller="NewsEvent" method="post" class="flex items-center gap-1">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button title="Like" class="hover:text-pink-500 transition-colors" type="submit">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <span class="text-xs text-gray-400">@item.Likes</span>
+                            </form>
+
+                            <a asp-action="Details" asp-route-id="@item.Id" title="Comment" class="hover:text-yellow-400 transition-colors flex items-center gap-1">
+                                <i class="fas fa-comment"></i>
+                                <span class="text-xs text-gray-400">
+                                    @(commentCounts != null && commentCounts.ContainsKey(item.Id)
+                                        ? commentCounts[item.Id]
+                                        : 0)
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+}

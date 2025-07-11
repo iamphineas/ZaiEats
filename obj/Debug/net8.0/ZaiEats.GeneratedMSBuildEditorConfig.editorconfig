@@ -17,89 +17,197 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ZaiEats
 build_property.RootNamespace = ZaiEats
-build_property.ProjectDir = C:\Users\erica\source\repos\ZaiEats\ZaiEats\
+build_property.ProjectDir = C:\Users\phine\source\repos\ZaiApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\erica\source\repos\ZaiEats\ZaiEats
+build_property.MSBuildProjectDirectory = C:\Users\phine\source\repos\ZaiApp
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Views/Admin/CreateMenuCategory.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Views/Admin/AssignManagers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXNzaWduTWFuYWdlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Admin/CreateManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlTWFuYWdlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Admin/CreateMenuCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlTWVudUNhdGVnb3J5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Views/Admin/CreateMenuItem.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Views/Admin/CreateMenuItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlTWVudUl0ZW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Views/Driver/CreateDriver.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Views/Admin/ListManagers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdE1hbmFnZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Customer/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Customer/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcT3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Customer/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Driver/CreateDriver.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVyXENyZWF0ZURyaXZlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Views/Home/Index.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Views/Restaurant/CreateRestaurant.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Views/KitchenStaff/CreateKitchenStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2l0Y2hlblN0YWZmXENyZWF0ZUtpdGNoZW5TdGFmZi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/KitchenStaff/IncomingOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2l0Y2hlblN0YWZmXEluY29taW5nT3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/NewsEvent/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c0V2ZW50XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/NewsEvent/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c0V2ZW50XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/NewsEvent/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c0V2ZW50XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/NewsEvent/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c0V2ZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/NewsEvent/Manage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c0V2ZW50XE1hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/NewsEvent/ManageComments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c0V2ZW50XE1hbmFnZUNvbW1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Payments/Return.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcUmV0dXJuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Podcast/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9kY2FzdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Podcast/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9kY2FzdFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Podcast/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9kY2FzdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Podcast/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9kY2FzdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Podcast/Manage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9kY2FzdFxNYW5hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Quotation/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVvdGF0aW9uXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Quotation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVvdGF0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Quotation/Request.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVvdGF0aW9uXFJlcXVlc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Quotation/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVvdGF0aW9uXFN1Y2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Restaurant/CreateRestaurant.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudFxDcmVhdGVSZXN0YXVyYW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Views/Restaurant/ViewMenu.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Views/Restaurant/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Restaurant/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Restaurant/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/phine/source/repos/ZaiApp/Views/Restaurant/ViewMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudFxWaWV3TWVudS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Views/Shared/Error.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Views/_ViewImports.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Views/_ViewStart.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/erica/source/repos/ZaiEats/ZaiEats/Views/Shared/_Layout.cshtml]
+[C:/Users/phine/source/repos/ZaiApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-s1c36asb6f

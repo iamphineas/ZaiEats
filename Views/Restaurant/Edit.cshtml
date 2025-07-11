@@ -1,0 +1,42 @@
+﻿@model ZaiEats.Models.Restaurant
+
+<div class="min-h-screen flex items-center justify-center bg-black px-4 py-8">
+    <div class="w-full max-w-md bg-zinc-900 text-white rounded-xl shadow-xl p-6 border border-zinc-800">
+        <h2 class="text-xl font-semibold mb-6 text-center text-amber-500">Edit Restaurant</h2>
+
+        <form asp-action="Edit" method="post" enctype="multipart/form-data" class="space-y-5">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="RestaurantId" />
+
+            <!-- Name -->
+            <div>
+                <label asp-for="Name" class="block font-medium text-gray-300 mb-1">Name</label>
+                <input asp-for="Name" class="w-full rounded-lg bg-zinc-800 border border-zinc-700 text-white px-4 py-2 focus:outline-none focus:ring focus:ring-amber-500" />
+                <span asp-validation-for="Name" class="text-red-400 text-sm"></span>
+            </div>
+
+            <!-- Description -->
+            <div>
+                <label asp-for="Description" class="block font-medium text-gray-300 mb-1">Description</label>
+                <textarea asp-for="Description" rows="3" class="w-full rounded-lg bg-zinc-800 border border-zinc-700 text-white px-4 py-2 focus:outline-none focus:ring focus:ring-amber-500"></textarea>
+                <span asp-validation-for="Description" class="text-red-400 text-sm"></span>
+            </div>
+
+            <!-- Image -->
+            <div>
+                <label class="block font-medium text-gray-300 mb-1">Current Image</label>
+                <img src="@Model.ImageUrl" class="w-32 h-32 object-cover rounded mb-3 border border-zinc-700" />
+
+                <label asp-for="ImageFile" class="block font-medium text-gray-300 mb-1">Replace Image</label>
+                <input type="file" asp-for="ImageFile" class="w-full bg-zinc-800 text-white text-sm rounded px-3 py-2 file:mr-4 file:py-1 file:px-3 file:rounded file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700" />
+            </div>
+
+            <!-- Submit -->
+            <div class="text-center pt-2">
+                <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition">
+                    Save Changes
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZaiEats")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abc7fa858d413419956fb1e99a74fee53185f19b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f396a90942e2b09910aaf74a08c6b4b36f5ec8b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZaiEats")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZaiEats")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

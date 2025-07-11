@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ZaiEats.Models.PodcastEpisode>
+
+@{
+    ViewData["Title"] = "Zai Podcasts";
+}
+
+<div class="max-w-6xl mx-auto mt-24 px-4 py-6">
+    <h2 class="text-3xl font-bold text-yellow-500 text-center mb-10">
+        <i class="fas fa-podcast text-yellow-400 mr-2"></i>Zai Cocktails & Chat
+    </h2>
+
+    @if (!Model.Any())
+    {
+        <div class="text-center text-gray-400">No episodes available at the moment.</div>
+    }
+    else
+    {
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+            @foreach (var episode in Model)
+            {
+                <div class="w-full max-w-sm bg-zinc-900 mx-auto rounded-xl shadow-md hover:shadow-yellow-600 overflow-hidden transition transform hover:-translate-y-1 duration-300 border border-zinc-700">
+                    <video class="w-full h-48 object-cover" controls>
+                        <source src="@episode.TeaserVideoPath" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <div class="p-5">
+                        <h3 class="text-white font-semibold text-lg mb-1">@episode.Title</h3>
+                        <p class="text-sm text-gray-400 mb-2">@episode.Description</p>
+                        <a href="@episode.FullEpisodeUrl" target="_blank"
+                           class="inline-flex items-center text-sm text-yellow-400 font-medium hover:text-yellow-300 transition">
+                            Watch Full Episode <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        @if (!string.IsNullOrEmpty(episode.Tags))
+                        {
+                            <p class="mt-2 text-xs text-gray-500 italic">
+                                Tags: @episode.Tags
+                            </p>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+}
